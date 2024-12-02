@@ -11,7 +11,6 @@ class ProdiController extends Controller
     {
 
         $search = $request->input('search');
-
         if ($search) {
             $prodis = Prodi::where('nama', 'like', '%' . $search . '%')->orderBy('id', 'desc')->get();
         } else {
